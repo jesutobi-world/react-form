@@ -1,8 +1,8 @@
 
-const AddOns = () => {
+const AddOns = ({formData, setFormData}) => {
   return (
     <div className="flex flex-col gap-5">
-        <label htmlFor="service" className="w-full h-auto p-3 flex gap-4 justify-start border border-solid border-coolGray rounded-md items-center">
+        <label htmlFor="service" className="w-full h-auto p-3 flex gap-4 justify-start border border-solid border-coolGray rounded-md items-center" onClick={() => setFormData({ ...formData, onlineService: !formData.onlineService })}>
             <input type="checkbox" name="" id="service" />
             <div>
                 <div className="text-marineBlue font-semibold text-[13px]">Online service</div>
@@ -10,7 +10,7 @@ const AddOns = () => {
             </div>
             <p className="ml-auto text-[12px] font-medium text-purpleishBlue">$1/mo</p>
         </label>
-        <label htmlFor="storage" className="w-full h-auto p-3 flex gap-4 justify-start border border-solid border-coolGray rounded-md items-center">
+        <label htmlFor="storage" className="w-full h-auto p-3 flex gap-4 justify-start border border-solid border-coolGray rounded-md items-center" onClick={() => setFormData({ ...formData, largeStorage: !formData.largeStorage })}>
             <input type="checkbox" name="" id="storage" />
             <div>
                 <div className="text-marineBlue font-semibold text-[13px]">Larger storage</div>
@@ -18,7 +18,7 @@ const AddOns = () => {
             </div>
             <p className="ml-auto text-[12px] font-medium text-purpleishBlue">$2/mo</p>
         </label>
-        <label htmlFor="profile" className="w-full h-auto p-3 flex gap-4 justify-start border border-solid border-coolGray rounded-md items-center">
+        <label htmlFor="profile" className="w-full h-auto p-3 flex gap-4 justify-start border border-solid border-coolGray rounded-md items-center" onClick={() => setFormData({ ...formData, customizableProfile: !formData.customizableProfile })}>
             <input type="checkbox" name="" id="profile" />
             <div>
                 <div className="text-marineBlue font-semibold text-[13px]">Customizable profile</div>

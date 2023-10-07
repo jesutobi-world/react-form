@@ -8,19 +8,29 @@ const Form = () => {
     const [page, setPage] = useState(0)
     const FormTitles = ["Personal info", "Select your plan", "Pick add-ons", "Finishing up"]
     const FormParagraph = ["Please provide your name, email address, and phone number.", "You have the option of monthly or yearly billing.", "Add-ons help enhance your gaming experience.", "Double-check everything looks OK before confirming"]
-    const [duration, setDuration] = useState('Monthl')
+    const [duration, setDuration] = useState('Monthly')
+    const [formData, setFormData] = useState({
+        userName : "",
+        email : "",
+        phoneNumber : "",
+        planName: "Arcade",
+        planSubscription : "Monthly",
+        onlineService : "false",
+        largeStorage : "false",
+        customizableProfile : "false"
+    })
     const PageDisplay = () => {
         if (page === 0) {
-            return <Info />
+            return <Info formData = {formData} setFormData = {setFormData} />
         }
         else if (page === 1) {
-            return <Plan duration = {duration} setDuration={setDuration} />
+            return <Plan duration = {duration} setDuration={setDuration} formData = {formData} setFormData = {setFormData} />
         }
         else if (page === 2) {
-            return <AddOns />
+            return <AddOns formData = {formData} setFormData = {setFormData} />
         }
         else {
-            return <Summary />
+            return <Summary formData = {formData} setFormData = {setFormData} />
         }
     }
     return (
