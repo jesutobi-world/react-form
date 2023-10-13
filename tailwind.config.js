@@ -7,8 +7,8 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'sideBarMobile' : "url('./assets/images/bg-sidebar-mobile.svg')",
-        'sideBarDesktop' : "url('./assets/images/bg-sidebar-desktop.svg')",
+        'sideBarMobile' : "url('/assets/images/bg-sidebar-mobile.svg')",
+        'sideBarDesktop' : "url('/assets/images/bg-sidebar-desktop.svg')",
       },
       colors:{
         'marineBlue' : "hsl(213, 96%, 18%)",
