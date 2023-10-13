@@ -2,11 +2,11 @@
 const Summary = ({formData, setFormData}) => {
   let subscriptionPrice = "";
   if (formData.planName === "Arcade") {
-    subscriptionPrice = formData.planSubscription === "Monthly" ? 9 : 90;
+    subscriptionPrice = formData.planSubscription === "Monthly" ?   9  :   90    ;
   } else if (formData.planName === "Advanced") {
-    subscriptionPrice = formData.planSubscription === "Monthly" ? 12 : 120;
+    subscriptionPrice = formData.planSubscription === "Monthly" ?   12     :  120  ;
   } else if (formData.planName === "Pro") {
-    subscriptionPrice = formData.planSubscription === "Monthly" ? 15 : 150;
+    subscriptionPrice = formData.planSubscription === "Monthly" ?   15     :  150  ;
   }
 
     // Calculate the individual service costs
