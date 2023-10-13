@@ -2,7 +2,7 @@
 const AddOns = ({formData, setFormData}) => {
   return (
     <div className="flex flex-col gap-5">
-        <label htmlFor="service" className="w-full h-auto p-3 flex gap-4 justify-start border border-solid border-coolGray rounded-md items-center" onClick={() => setFormData({ ...formData, onlineService: !formData.onlineService })}>
+        <label htmlFor="service" className={`w-full h-auto p-3 flex gap-4 justify-start border border-solid border-coolGray rounded-md items-center ${formData.onlineService === true && 'bg-mangolia border-purpleishBlue'}`} onClick={() => setFormData({ ...formData, onlineService: !formData.onlineService })}>
             <input type="checkbox" name="" id="service" />
             <div>
                 <div className="text-marineBlue font-semibold text-[13px]">Online service</div>

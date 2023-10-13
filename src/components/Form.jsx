@@ -15,9 +15,9 @@ const Form = () => {
         phoneNumber : "",
         planName: "Arcade",
         planSubscription : "Monthly",
-        onlineService : "false",
-        largeStorage : "false",
-        customizableProfile : "false"
+        onlineService : false,
+        largeStorage : false,
+        customizableProfile : false
     })
     const PageDisplay = () => {
         if (page === 0) {

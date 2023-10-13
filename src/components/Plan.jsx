@@ -4,16 +4,16 @@ const Plan = ({duration, setDuration, formData, setFormData}) => {
     const toggleSubscription = () => {
         if (duration === 'Monthly') {
           setDuration('Yearly');
-          setSubscription('Yearly')
+          setFormData({ ...formData, planSubscription: "Yearly" });
         } else {
           setDuration('Monthly');
-          setSubscription('Monthly')
+          setFormData({ ...formData, planSubscription: "Monthly" });
         }
       };
   return (
     <div className="flex flex-col gap-6">
         <div className="flex gap-3">
-            <div className={`w-[122px] h-40 border border-solid border-lightGray flex flex-col p-4 rounded-md justify-between cursor-pointer ${duration === 'Monthly' ? 'h-40' : 'h-44'}`} onClick={() => setFormData({ ...formData, planName: "Arcade" })}>
+            <div className={`w-[122px] h-40 border border-solid border-lightGray flex flex-col p-4 rounded-md justify-between cursor-pointer ${duration === 'Monthly' ? 'h-40' : 'h-44'} ${formData.planName === "Arcade" && 'bg-mangolia border-purpleishBlue'}`} onClick={() => setFormData({ ...formData, planName: "Arcade" })}>
                 <div>
                     <img src="/assets/images/icon-arcade.svg" alt="icon" />
                 </div>
@@ -23,7 +23,7 @@ const Plan = ({duration, setDuration, formData, setFormData}) => {
                     <p className={`text-marineBlue font-medium text-[13px] ${duration === 'Monthly' ? 'hidden' : ''}`}>2 months free</p>
                 </div>
             </div>
-            <div className={`w-[122px] h-40 border border-solid border-lightGray flex flex-col p-4 rounded-md justify-between cursor-pointer ${duration === 'Monthly' ? 'h-40' : 'h-44'}`} onClick={() => setFormData({ ...formData, planName: "Advanced" })}>
+            <div className={`w-[122px] h-40 border border-solid border-lightGray flex flex-col p-4 rounded-md justify-between cursor-pointer ${duration === 'Monthly' ? 'h-40' : 'h-44'}  ${formData.planName === "Advanced" && 'bg-mangolia border-purpleishBlue'}`} onClick={() => setFormData({ ...formData, planName: "Advanced" })}>
                 <div>
                     <img src="/assets/images/icon-advanced.svg" alt="icon" />
                 </div>
@@ -33,7 +33,7 @@ const Plan = ({duration, setDuration, formData, setFormData}) => {
                     <p className={`text-marineBlue font-medium text-[13px] ${duration === 'Monthly' ? 'hidden' : ''}`}>2 months free</p>
                 </div>
             </div>
-            <div className={`w-[122px] h-40 border border-solid border-lightGray flex flex-col p-4 rounded-md justify-between cursor-pointer ${duration === 'Monthly' ? 'h-40' : 'h-44'}`} onClick={() => setFormData({ ...formData, planName: "Pro" })}>
+            <div className={`w-[122px] h-40 border border-solid border-lightGray flex flex-col p-4 rounded-md justify-between cursor-pointer ${duration === 'Monthly' ? 'h-40' : 'h-44'} ${formData.planName === "Pro" && 'bg-mangolia border-purpleishBlue'}`} onClick={() => setFormData({ ...formData, planName: "Pro" })}>
                 <div>
                     <img src="/assets/images/icon-pro.svg" alt="icon" />
                 </div>
